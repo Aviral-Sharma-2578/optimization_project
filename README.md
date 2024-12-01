@@ -12,7 +12,7 @@
 --- 
 
 
-## Problem Statement for `tabu_search.py`
+## Problem Statement for `lagrangian_tabu_search.py`
 
 
 ---
