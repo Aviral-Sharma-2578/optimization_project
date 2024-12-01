@@ -41,39 +41,21 @@ As a result, we can write the objective function we want to minimize as follows:
 
 Next, we must write the constraints of the mathematical model. 
 
-Our first set of constraints is as you can see below. These are demand constraints. That is, they are constraints that ensure that all farm demands are fully met:
+Our first set of constraints is as seen below. These are demand constraints. That is, they are constraints that ensure that all farm demands are fully met:
 
 ![image](https://user-images.githubusercontent.com/82934361/170120206-1413758d-2335-41f4-b520-b1e26493d85f.png)
 
-Our second set of constraints is as you can see below. These are logical constraints; that is, as soon as the left side of any constraint is positive, the binary y decision variable on the right is forced to be 1. Logically, for example, if the left side of the 1st less than equal constraint is positive, it means that some farm demands will be met by facility 1, and for this to happen, facility 1 must be open, that is, the decision variable y_1 must be forced to be 1. At the same time, these constraints ensure that the capacity limits are not exceeded:
+Our second set of constraints is as seen below. These are logical constraints; that is, as soon as the left side of any constraint is positive, the binary y decision variable on the right is forced to be 1. Logically, for example, if the left side of the 1st less than equal constraint is positive, it means that some farm demands will be met by facility 1, and for this to happen, facility 1 must be open, that is, the decision variable y_1 must be forced to be 1. At the same time, these constraints ensure that the capacity limits are not exceeded:
 
 ![image](https://user-images.githubusercontent.com/82934361/170121588-e814fc9b-15d3-4a3b-9e37-c4a986f681ae.png)
 
-And below you can see the constraints of the decision variables. These constraints force the decision variable x_ij to be non-negative and the decision variable y_i to be binary:
+And below is the constraints of the decision variables. These constraints force the decision variable x_ij to be non-negative and the decision variable y_i to be binary:
 
 ![image](https://user-images.githubusercontent.com/82934361/170121718-cd82c95f-2015-4983-8f03-2a29ca3e35c3.png)
 
 It should be noted that; the optimal solution to the problem ensures that facilities 1, 5 and 6 are capitalized and the total daily cost is equal to 1218.08.
 
-# Interpreting the output of the algorithm's code
-Output is as you can see below:
-
-![image](https://user-images.githubusercontent.com/82934361/170123703-15788e8e-6a46-4c7f-a7f4-c56d4f0ba39f.png)
-
-The code reached the optimum result in approximately 0.153 seconds and 8 iterations. We know that if we increase the size of the problem, it will not be as successful, but it is clear that this result is quite fast. 
-
-# Taboo Search Algorithm in Brief
-Tabu search is a "metaheuristic" search method used for mathematical optimization. To explain the difference between heuristics and metaheuristics; heuristics are often problem dependent, meaning you define a heuristic for a particular problem. Metaheuristics are problem-free techniques that can be applied to a wide range of problems. Tabu search (TS) is a metaheuristic algorithm that can be used for solving combinatorial optimization problems. 
-
-Taboo search implements the methods of local search, and at some moments (i.e. where all the neighbouring solutions are non-improving) it can use more than one way to escape the local optimum: accepting bad moves (that is, accepting a solution as an current solution even though it costs more), changing the objective function or changing the neighborhood structure. In our code, tabu search occasionally accepts bad moves to avoid local optima's.
-
-Briefly; In tabu search, a move is always made towards the best solution in the neighborhood, even if it is worse than the current solution. This helps to avoid local optima.
-
-In tabu search, "short-term memory" is used to avoid cyclic moves (that is, the same region is visited over and over) in problem solving. The algorithm's "Short-term memory" is created by preventing the search from revisiting previously visited solutions (i.e. creating a "tabu list"). We do not store ALL visited solutions in the Tabu list. Usually, only some forbidden solutions, moves or their attributes are stored in the Tabu list. 
-
-In our code; to the tabu list, moves that are taboo are appended with their tabu tanure; tabu tanure is the lifetime of a taboo (ie how many iterations a tabu will remain taboo for).
-
-# Procedure of our code
+# Usual Procedure
 ![image](https://user-images.githubusercontent.com/82934361/170269853-922040b5-9696-4b01-a61e-77a034bff419.png)
 
 
