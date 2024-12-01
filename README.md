@@ -1,4 +1,4 @@
-# Optimization Algorithms for Supply Chain and Facility Location Problems
+# Lagrangian Relaxation: Hybrid Approach
 
 
 
@@ -8,6 +8,7 @@
 
 ## Problem Statement for `subgradient.py` and `surrogate.py`
 
+![Screenshot from 2024-12-01 17-03-28](https://github.com/user-attachments/assets/eea90834-f236-4ed8-b65d-f78103b210a1)
 
 --- 
 
