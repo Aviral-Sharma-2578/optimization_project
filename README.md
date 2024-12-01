@@ -1,4 +1,4 @@
-# Lagrangian Relaxation: Hybrid Approach
+ Lagrangian Relaxation: Hybrid Approach
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-## Problem Statement for `subgradient.py` and `surrogate.py`
+# Problem Statement for `subgradient.py` and `surrogate.py`
 
 ![Screenshot from 2024-12-01 17-03-28](https://github.com/user-attachments/assets/eea90834-f236-4ed8-b65d-f78103b210a1)
 
@@ -56,7 +56,7 @@ And below is the constraints of the decision variables. These constraints force 
 
 It should be noted that; the optimal solution to the problem ensures that facilities 1, 5 and 6 are capitalized and the total daily cost is equal to 1218.08.
 
-# Usual Procedure
+### Usual Procedure
 ![image](https://user-images.githubusercontent.com/82934361/170269853-922040b5-9696-4b01-a61e-77a034bff419.png)
 
 
@@ -64,7 +64,7 @@ It should be noted that; the optimal solution to the problem ensures that facili
 
 
 
-## Files in This Repository
+ Files in This Repository
 
 1. `subgradient.py`: Implements the subgradient method for solving the Lagrangian dual problem.
 2. `surrogate.py`: Implements the surrogate subgradient method for solving a modified Lagrangian dual.
